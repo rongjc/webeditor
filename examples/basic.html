@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MovieMaker WASM SDK demo</title>
+  </head>
+  <body>
+    <h1>MovieMaker WASM SDK demo</h1>
+    <script type="module">
+      import { MovieMakerWasmSDK } from "../src/sdk.js";
+
+      const sdk = await MovieMakerWasmSDK.create();
+      const track = sdk.timeline.addTrack("video");
+      sdk.timeline.addClip(track, {
+        source: "sample.mp4",
+        startMs: 0,
+        endMs: 4000
+      });
+
+      console.log("Project plan", sdk.createProject());
+    </script>
+  </body>
+</html>

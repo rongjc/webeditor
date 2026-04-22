@@ -1,0 +1,15 @@
+{
+  "name": "@webeditor/wasm-video-sdk",
+  "version": "0.1.0",
+  "description": "Fast browser video editor SDK with WebAssembly-accelerated effects.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "node --check src/*.js test/*.js",
+    "smoke": "npm test && npm run lint",
+    "serve-demo": "python3 -m http.server 4173"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
